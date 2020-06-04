@@ -92,3 +92,59 @@ if (ctx.isTxSteadyState())
 contentStats.sumContentSize[ctx.getOperationId()] += size;
 }
   }
+
+Run.xml ()
+
+<?xml version="1.0" encoding="UTF-8"?>
+<sampleWeb>
+<jvmConfig xmlns="http://faban.sunsource.net/ns/fabanharness">
+<javaHome>/usr/lib/jvm/java-6-sun</javaHome>
+<jvmOptions>-Xmx256m -Xms64m -XX:+DisableExplicitGC</jvmOptions>
+</jvmConfig>
+<!-- The definition binds the config file with the benchmark class -->
+<!-- We declare the driver as the default namespace cause it is most common
+here -->
+<fa:runConfig definition="com.testnscale.sampleweb.SampleWebDriver"
+xmlns:fa="http://faban.sunsource.net/ns/faban"
+xmlns:fh="http://faban.sunsource.net/ns/fabanharness"
+xmlns="http://faban.sunsource.net/ns/fabandriver">
+<fh:description>Write the run description here.</fh:description>
+<!-- The hostConfig section is used by the harness to control hosts -->
+<fa:hostConfig>
+<fa:host>driverHost</fa:host>
+<fh:tools></fh:tools>
+</fa:hostConfig>
+<!-- The scale of the benchmark run, the driver definition
+defines the number of threads for each driver scale
+and each driver type. -->
+<fa:scale>10</fa:scale>
+<!-- The rampup, steadystate, and rampdown of the driver -->
+<fa:runControl unit="time">
+<fa:rampUp>30</fa:rampUp>
+<fa:steadyState>120</fa:steadyState>
+<fa:rampDown>10</fa:rampDown>
+</fa:runControl>
+<!-- The driver-specific config. -->
+<driverConfig name="SampleWeb">
+<properties>
+<property>
+<name>homePath</name>
+<value>/samplewebapp/home.html</value>
+</property>
+<property>
+<name>productsPath</name>
+<value>/samplewebapp/products.html</value>
+</property>
+<property>
+<name>contactsPath</name>
+<value>/samplewebapp/contacts.html</value>
+</property>
+<property>
+<name>secure</name>
+<fa:runControl unit="time">
+<fa:rampUp>30</fa:rampUp>
+<fa:steadyState>120</fa:steadyState>
+<fa:rampDown>10</fa:rampDown>
+</fa:runControl>
+<!-- The driver-specific config. -->
+<driverConfig name="SampleWeb">
