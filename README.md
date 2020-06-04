@@ -4,7 +4,8 @@
 3. Load the Google trace file into the PSPP statistical tool to analyze the statistical information about the real workload. 
 4. Create a client and server Instance in Amazon Web Service.
 5. In both these instances, install Apache Ant and Java as prerequisites to run the statistical tool Faban. 
-   Apache Ant: 
+
+   Apache Ant:  
    Java:
 6. 
 7. Set $JAVA_HOME and $FABAN_HOME. 
