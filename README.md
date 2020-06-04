@@ -7,9 +7,10 @@
 Apache Ant:  https://ant.apache.org/bindownload.cgi
 Java: https://www.oracle.com/java/technologies/javase-jdk14-downloads.html#license-lightbox
 6. Install Faban in both the client and server instance. 
-7. Install Apache server in the server instance and run it - sudo apt install apache2
+7. Install Apache server in the server instance and run it.
 8. Set $JAVA_HOME and $FABAN_HOME. 
-9. Host the web pages, Home.html,Products.html and Contacts.html in the Server Instance. 
-10. The faban driver
+9. Host the web pages, Home.html,Products.html and Contacts.html on the Server Instance. 
+10. Bring up the Faban Driver (CoreHttp.java) by pointing the browser to the link provided after starting faban. 
+11. 
 
 
