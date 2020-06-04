@@ -10,7 +10,7 @@ Java: https://www.oracle.com/java/technologies/javase-jdk14-downloads.html#licen
 7. Set $JAVA_HOME and $FABAN_HOME. 
 8. Install Apache server in the server instance and run it.
 9. Host the web pages, Home.html,Product.html and Contacts.html on the Server Instance. 
-10. Bring up the Faban Driver (CoreHttp.java) by pointing the browser to the link provided after starting faban. 
+10. Bring up the Faban Driver (CoreHttpDriver.java) by pointing the browser to the link provided after starting faban. 
 11. Run.xml is executed which contains the path to the web pages hosted and for host configurations. 
 12. In Build.properties.template, we set the java_home, username and password.
 11. Specify different Scale Parameters and run Faban to generate log files and Comparison Reports. 
