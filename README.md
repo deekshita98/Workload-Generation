@@ -8,6 +8,6 @@
    Java: https://www.oracle.com/java/technologies/javase-jdk14-downloads.html#license-lightbox
 6. Install Faban in both the client and server instance. 
 7. Set $JAVA_HOME and $FABAN_HOME. 
-8. 
+8. The faban driver
 
 
